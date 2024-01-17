@@ -1,37 +1,83 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./assets/css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Rubik:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="shortcut icon" href="./assets/img/logo-redondo.png" type="image/x-icon">
   <title>Victor Hugo</title>
 </head>
+
 <body>
-  <header>
-    <nav>
-      <div class="logo">
-        <a href="#"><img src="./assets/img/logo.png" alt="logo" id="logo">
-      </div>
-      <div class="menu">
-      <ul>
-        <li><a href="#inicio">Início</a></li>
-        <li><a href="#sobre">Sobre mim</a></li>
-        <li><a href="#projetos">Projetos</a></li>
-        <li><a href="#habilidades">Habilidades</a></li>
-        <li><a href="#contato">Contato</a></li>
-      </ul>
-      </div>
-    </nav>
+  <header id="header">
+    <div class="container">
+      <nav>
+        <div class="logo">
+          <a href="#"><img src="./assets/img/logo-redondo-sf.png" alt="logo" id="logo"></a>
+        </div>
+        <div class="menu">
+          <ul>
+            <li><a href="#inicio">Início</a></li>
+            <li><a href="#sobre">Sobre</a></li>
+            <li><a href="#projetos">Projetos</a></li>
+            <li><a href="#habilidades">Habilidades</a></li>
+            <li class="contato"><a href="#contato"><button>Contato</button></a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
   </header>
   <main>
-    <div id="inicio"></div>
-    <div id="sobre"></div>
-    <div id="projetos"></div>
-    <div id="habilidades"></div>
-    <div id="contato"></div>
+    <section class="inicio" id="inicio">
+      <div class="container">
+        <div class="flex">
+          <div class="txt-ini">
+            <h2>Olá <span class="mao">👋</span>, eu sou</h2>
+            <h1 class="nome">Victor Hugo.</h1>
+            <p>Desenvolvedor Full-Stack.</p>
+            <div class="botoes">
+              <a href="http://www.linkedin.com/in/victor-hugo-ms" target="_blank" rel="noopener noreferrer"><button class="linkedin"><img src="./assets/img/linkedin.svg" alt="">Linkedin</button></a>
+              <a href="https://github.com/VictorHugo1204" target="_blank" rel="noopener noreferrer"><button class="github"><img src="./assets/img/github.svg" alt="">GitHub</button></a>
+            </div>
+          </div>
+
+          <div class="img-ini">
+            <img src="./assets/img/foto-rp.png" alt="Minha Foto"> 
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="sobre" id="sobre">
+      <div class="container">
+        <div class="flex">
+          <div class="img-sobre">
+            <img src="./assets/img/img-sobre.png" alt="Cartoon">
+          </div>
+          <div class="txt-sobre">
+            <h2>Sobre mim</h2>
+            <p>Meu nome é Victor Hugo e gosto muito de tecnologia desde de pequeno. Sempre busquei conhecimento nessa área e hoje 
+              possuo uma formação acadêmica técnica em Informática para Internet.
+            </p>
+            <p>Atualmente, tenho conhecimento em desenvolvimento full-stack, principalmente nas linguagens HTML, CSS, 
+              JavaScrip e PHP. Sei o básico sobre GIT e sistemas operacionais. Possuo também conhecimento em pacote office e 
+              hardware, adquiridos durante minha formação técnica.⚡🧠
+            </p>
+            <p>
+              Busco aprimorar meus conhecimentos e embora não tenha experiência profissional anterior, estou aberto a 
+              desafios que ofereçam crescimento profissional e oportunidades de aprendizado.🚀
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
   </main>
   <footer></footer>
+
+  <script src="./assets/js/script.js"></script>
 </body>
+
 </html>

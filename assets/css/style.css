@@ -1,45 +1,264 @@
+/* ESTILO GERAL */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Rubik;
+  font-size: 18px;
+}
+
 body {
-  background-color: #020D19;
+  /* background-color: #020D19; */
+  background: linear-gradient(45deg, #020D19 50%, #0B1215 50%);
+  height: 100vh;
 }
 
+.container{
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.flex{
+  display: flex;
+}
+
+/* ESTILO DO CABEÇALHO */
 header{
-  background-color: rgb(0, 0, 0);
+  background-color: #0C0C0C;
   text-align: center;
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+  transition: 1s;
 }
 
-#logo{
+header.rolagem{
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+header #logo{
   height: 70px;
   border-radius: 50%;
 }
 
-nav{
+header nav {
   display: flex;
-  justify-content: space-around;
-  list-style: none;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+  padding: 10px;
+  z-index: 100;
 }
 
-ul{
+header nav .logo {
+  display: flex;
+  align-items: center;
+}
+
+header nav .logo img {
+  height: 30px;
+  width: auto;
+}
+
+header nav ul {
+  list-style-type: none;
   margin: 0;
   padding: 0;
-  font-family: Arial, sans-serif;
-  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+header nav ul li {
+  padding: 0 20px;
+}
+
+header nav ul li a {
+  color: #686868;
+  text-decoration: none;
+  display: inline-block;
+}
+
+header nav ul li a:hover {
+  color: #ffffff;
+  transform: scale(1.05);
+  transition: .3s;
+}
+
+header .contato button{
+  background: linear-gradient(135deg, #FA8F2D 35%, #2DFAE1 95%);
+  border-radius: 30px;
+  padding: 10px 30px;
+  font-weight: 600;
+  border: 0;
+  cursor: pointer;
+}
+
+header .contato button:hover{
+  box-shadow: 0px 0px 10px #FA8F2D, 0px 0px 10px #2DFAE1;
+}
+
+/* ESTILO DO INÍCIO */
+section.inicio{
+  padding: 40px 4%;
+  padding-top: 150px;
+}
+
+section.inicio .flex{
+  align-items: center;
+  justify-content: space-around;
+  gap: 90px;
+}
+
+.inicio .txt-ini h1{
+  color: #fff;
+  font-size: 70px;
+  position: relative;
+  width: 0px;
+  border-right: 2px solid rgba(255, 255, 255, 0.75);
+  text-align: center;
+  white-space: nowrap;
   overflow: hidden;
 }
 
-li{
-  transition: all .3s ease-in-out;
-  display: inline;
+/*Animação TEXTO*/
+.nome {
+  animation: typewriter 6s steps(12) 500ms infinite,
+  blinkTextCursor 500ms steps(12) infinite normal;
+}
+@keyframes typewriter {
+  0% {
+        width: 0%;
+  }
+  10% {
+        width: 0%;
+  }
+  25% {
+        width: 100%;
+  }
+  75% {
+        width: 100%;
+  }
+  90% {
+        width: 100%;
+  }
+  100% {
+        width: 0%;
+  }
+}
+@keyframes blinkTextCursor {
+  from {
+        border-right-color: rgba(255, 255, 255, 0.75);
+  }
+  to {
+        border-right-color: transparent;
+  }
+}
+/* FIM ANIMAÇÃO TEXTO */
+
+.inicio .txt-ini h2{
+  color: #fff;
+  font-size: 30px;
 }
 
-li a{
-  font-size: 18px;
-  display: inline;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
+.mao{
+  font-size: 20px;
+}
+
+.inicio .txt-ini p{
+  color: #fff;
+  margin-bottom: 30px;
+  font-size: 22px;
+}
+
+.inicio .botoes{
+  display: flex;
+  gap: 20px;
+}
+
+.inicio .botoes button{
+  border-radius: 30px;
+  padding: 10px 30px;
+  font-weight: 600;
+  border: 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.inicio .botoes .linkedin{
+  background-color: #2DFAE1;
+}
+
+.inicio .botoes .github{
+  background-color: #FA8F2D;
+}
+
+.inicio .botoes .github:hover{
+  box-shadow: 0px 0px 10px #ff7b00;
+  transform: scale(1.05);
+  transition: .3s;
+}
+
+.inicio .botoes .linkedin:hover{
+  box-shadow: 0px 0px 10px #00ffe1;
+  transform: scale(1.05);
+  transition: .3s;
+}
+
+.inicio .botoes img{
+  height: 30px;
+}
+
+.inicio .botoes a{
   text-decoration: none;
 }
 
-.menu{
-  display: grid;
+.inicio .img-ini img{
+  height: 400px;
+  position: relative;
+  animation: flutuar 2s ease-in-out infinite alternate;
+}
+
+/* ANIMAÇÃO IMAGEM */
+@keyframes flutuar{
+  0%{
+    top: 0;
+  }
+  100%{
+    top: 20px;
+  }
+}
+
+/* ESTILO SOBRE */
+.sobre{
+  background-color: #0C0C0C;
+}
+
+section.sobre{
+  padding: 10px 4%;
+}
+
+section.sobre .flex{
+  align-items: center;
+  gap: 90px;
+}
+
+.sobre .txt-sobre h2{
+  color: #fff;
+  font-size: 30px;
+  border-left: 5px solid #ff7b00;
+  padding-left: 10px;
+}
+
+.sobre .txt-sobre p{
+  margin-top: 20px;
+  /* max-width: 90%; */
+  text-align: justify;
+  color: #fff;
+}
+
+.sobre .img-sobre img{
+  position: relative;
+  animation: flutuar 2s ease-in-out infinite alternate;
 }
