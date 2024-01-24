@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./assets/css/style.css">
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Rubik:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/5989ff8c78.js" crossorigin="anonymous"></script>
   <link rel="shortcut icon" href="./assets/img/logo-redondo.png" type="image/x-icon">
   <title>Victor Hugo</title>
 </head>
@@ -23,9 +24,24 @@
             <li><a href="#sobre">Sobre</a></li>
             <li><a href="#projetos">Projetos</a></li>
             <li><a href="#habilidades">Habilidades</a></li>
-            <li class="contato"><a href="#contato"><button>Contato</button></a></li>
           </ul>
         </div>
+
+        <button onclick="menu()" id="btn-menu">
+          <span class="linha"></span>
+          <span class="linha"></span>
+          <span class="linha"></span>
+        </button>
+
+        <div class="menu-mobile" id="menu-mobile">
+          <ul>
+            <li><a href="#inicio">Início</a></li>
+            <li><a href="#sobre">Sobre</a></li>
+            <li><a href="#projetos">Projetos</a></li>
+            <li><a href="#habilidades">Habilidades</a></li>
+          </ul>
+        </div>
+        
       </nav>
     </div>
   </header>
@@ -75,12 +91,118 @@
       </div>
     </section>
 
-    <section class="projetos" id="projetos"></section>
-  </main>
-  </main>
-  <footer></footer>
+    <section class="projetos" id="projetos">
+      <div class="container">
+        <h2 class="titulo">MEUS <span>PROJETOS</span></h2>
+        <div class="flex">
+          <div class="img-proj" style="background-image: url(assets/img/TCC.jpg);">
+            <div class="overlay"><a href="https://github.com/VictorHugo1204/Informatech" target="_blank" rel="noopener noreferrer">INFORMATECH</a></div>
+          </div>
+          <div class="img-proj" style="background-image: url(assets/img/Influxo.jpg);">
+            <div class="overlay"><a href="https://github.com/VictorHugo1204/Influxo" target="_blank" rel="noopener noreferrer">INFLUXO</a></div>
+          </div>
+          <div class="img-proj" style="background-image: url(assets/img/EM-BREVE.png);">
+            <!-- <div class="overlay"><a href="#" target="_blank" rel="noopener noreferrer">EM BREVE</a></div> -->
+          </div>
+        </div>
+        <div class="flex" id="mais-proj" style="display: none">
+          <div class="img-proj" style="background-image: url(assets/img/EM-BREVE.png);">
+            <!-- <div class="overlay"><a href="#" target="_blank" rel="noopener noreferrer">EM BREVE</a></div> -->
+          </div>
+          <div class="img-proj" style="background-image: url(assets/img/EM-BREVE.png);">
+            <!-- <div class="overlay"><a href="#" target="_blank" rel="noopener noreferrer">EM BREVE</a></div> -->
+          </div>
+          <div class="img-proj" style="background-image: url(assets/img/EM-BREVE.png);">
+            <!-- <div class="overlay"><a href="#" target="_blank" rel="noopener noreferrer">EM BREVE</a></div> -->
+          </div>
+        </div> 
+        <div class="flex">
+        <button onclick="verMais()" class="ver-mais" id="ver-mais">VER MAIS</button>
+        </div>
+      </div>
+    </section>
 
-  <script src="./assets/js/script.js"></script>
+    <section class="habilidades" id="habilidades">
+      <div class="container">
+        <h2 class="titulo">MINHAS <span>HABILIDADES</span></h2>
+        <div class="flex">
+          <div class="habili-card">
+            <i class="fa-brands fa-html5"></i>
+            <h3>HTML</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum voluptatem quisquam architecto eaque 
+              libero dolore molestiae!</p>
+          </div>
+
+          <div class="habili-card">
+            <i class="fa-brands fa-css3-alt"></i>
+            <h3>CSS</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum voluptatem quisquam architecto eaque 
+              libero dolore molestiae!</p>
+          </div>
+
+          <div class="habili-card">
+            <i class="fa-brands fa-php"></i>
+            <h3>PHP</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum voluptatem quisquam architecto eaque 
+              libero dolore molestiae!</p>
+          </div>
+        </div>
+
+        <div class="flex">
+          <div class="habili-card seg">
+            <i class="fa-brands fa-git-alt"></i>
+            <h3>GIT</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum voluptatem quisquam architecto eaque 
+              libero dolore molestiae!</p>
+          </div>
+
+          <div class="habili-card seg">
+            <i class="fa-brands fa-github"></i>
+            <h3>GitHub</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum voluptatem quisquam architecto eaque 
+              libero dolore molestiae!</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <button onclick="scrollToTop()" id="topo"><i class="fa-solid fa-arrow-up"></i></button>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="line-footer">
+        <div class="flex">
+          <div class="logo-footer">
+            <img src="./assets/img/logo-redondo-sf.png" alt="Logo Footer" id="logo">
+              <div class="center">
+                <div class="flex-footer">
+                  <p>Desenvolvido por Victor Hugo</p> <img class="coroa" src="./assets/img/coroa.png" alt="Logo Coroa">
+                </div>
+                <p><i class="fa-solid fa-envelope" aria-hidden="true"></i> <a href="mailto:victorhugoms450@outlook.com">victorhugoms450@outlook.com</a></p>
+              </div>
+          </div>
+            <div class="btn-social">
+              <a href="https://www.instagram.com/victor_hugoms1204/" target="_blank"><button><i class="fa-brands fa-instagram"></button></i></a>
+              <a href="https://github.com/VictorHugo1204" target="_blank"><button><i class="fa-brands fa-github"></button></i></a>
+              <a href="http://www.linkedin.com/in/victor-hugo-ms" target="_blank"><button><i class="fa-brands fa-linkedin"></button></i></a>
+              <a href="https://api.whatsapp.com/send?phone=5512982786214" target="_blank"><button><i class="fa-brands fa-whatsapp"></button></i></a>
+            </div>
+          </div>
+      </div>
+
+      <div class="line-footer borda">
+          
+      </div>
+    </div>
+  </footer>
+
+  <script src="./assets/js/scroll.js"></script>
+  <script src="./assets/js/ver-mais.js"></script>
+  <script src="./assets/js/menu-mobile.js"></script>
+  <script src="./assets/js/topo.js"></script>
+  <script src="./assets/js/botao-topo.js"></script>
 </body>
 
 </html>
